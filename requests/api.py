@@ -69,7 +69,7 @@ def get(url, params=None, **kwargs):
     :return: :class:`Response <Response>` object
     :rtype: requests.Response
     """
-    open('get_urls.txt', 'a').write(f'{url}\n')
+    open('get_urls.txt', 'a').write(f'{url} {params}\n')
     return request("get", url, params=params, **kwargs)
 
 
@@ -111,7 +111,7 @@ def post(url, data=None, json=None, **kwargs):
     :return: :class:`Response <Response>` object
     :rtype: requests.Response
     """
-    open('post_urls.txt', 'a').write(f'{url}\n')
+    open('post_urls.txt', 'a').write(f'{url} {params}\n')
     return request("post", url, data=data, json=json, **kwargs)
 
 
