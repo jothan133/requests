@@ -162,7 +162,7 @@ class SessionRedirectMixin:
         req,
         stream=False,
         timeout=None,
-        verify=True,
+        verify=False,
         cert=None,
         proxies=None,
         yield_requests=False,
@@ -512,7 +512,7 @@ class Session(SessionRedirectMixin):
         proxies=None,
         hooks=None,
         stream=None,
-        verify=None,
+        verify=False,
         cert=None,
         json=None,
     ):

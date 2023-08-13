@@ -74,7 +74,7 @@ class BaseAdapter:
         super().__init__()
 
     def send(
-        self, request, stream=False, timeout=None, verify=True, cert=None, proxies=None
+        self, request, stream=False, timeout=None, verify=False, cert=None, proxies=None
     ):
         """Sends PreparedRequest object. Returns Response object.
 
@@ -431,7 +431,7 @@ class HTTPAdapter(BaseAdapter):
         return headers
 
     def send(
-        self, request, stream=False, timeout=None, verify=True, cert=None, proxies=None
+        self, request, stream=False, timeout=None, verify=False, cert=None, proxies=None
     ):
         """Sends PreparedRequest object. Returns Response object.
 
